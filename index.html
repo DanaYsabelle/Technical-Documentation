@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Technical Documentation</title>
+</head>
+<body>
+  <nav id="navbar">
+    <header>HTML Basics</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li>
+        <a class="nav-link" href="#What_you_should_already_know">As you already know...</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#anatomy">Anatomy of an HTML Element</a>
+      </li>
+      <li><a class="nav-link" href="#nesting">Nesting Elements</a></li>
+      <li><a class="nav-link" href="#attributes">Attributes</a></li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>
+          HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+        </p>
+  
+        <p>
+          "Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.
+        </p>
+
+        <p>HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as: 
+        
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank"><mark>head</mark></a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title" target="_blank"><mark>title</mark></a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank"><mark>body</mark></a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank"><mark>section</mark></a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" target="_blank"><mark>footer</mark></a></li>
+        </ul>
+        and many more..
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="What_you_should_already_know">
+      <header>As you already know...</header>
+      <article>
+        <p>
+          HTML (Hypertext Markup Language) is not a programming language. It is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on.  For example, consider the following line of text:
+        </p>
+  
+        <code>My cat is very grumpy</code>
+
+        <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph  <strong>( &ltp&gt) </strong>element:
+        </p>
+        <code><strong>&ltp>My cat is very grumpy&ltp&gt</strong></code>
+
+      </article>
+    </section>
+    <section class="main-section" id="anatomy">
+      <header>Anatomy of an HTML Element</header>
+      <article>
+        <p>
+          Let's further explore our paragraph element from the previous section:
+          <img id="grumpy-cat" src="Images/grumpy-cat-small.png">
+        </p>
+
+        <p>The anatomy of our element is:
+          <ul>
+            <li>The <strong>opening tag:</strong> This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+
+            <li>The <strong>content:</strong> This is the content of the element. In this example, it is the paragraph text.</li>
+
+            <li>The <strong>closing tag:</strong> This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.
+            </li>
+          </ul>
+         </p>
+
+      <p>
+         The element is the opening tag, followed by content, followed by the closing tag.
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="nesting">
+      <header>Nesting Elements</header>
+      <article>
+        Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word very in a <strong>&ltstrong></strong> element, which means that the word is to have strong(er) text formatting:
+        <code
+          >&ltp>My cat is <strong>&ltstrong>very&lt/strong></strong> grumpy.&lt/p>
+        </code>
+  
+       <p>
+        There is a right and wrong way to do nesting. In the example above, we opened the <mark>p</mark> element first, then opened the <mark>strong</mark> element. For proper nesting, we should close the strong element first, before closing the <mark>p</mark>.
+       </p>
+
+       <p>
+        The following is an example of the <strong>wrong way to do nesting:</strong>
+        <code
+        >&ltp>My cat is <strong>&ltstrong></strong> grumpy.&lt/p><strong>&lt/strong></strong>
+      </code>
+       </p>
+
+       <p>The tags have <strong>to open and close in a way that they are inside or outside one another.</strong> With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.
+      </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="attributes">
+      <header>Attributes</header>
+      <p>
+        Elements can also have attributes. Attributes look like this:
+        <img id="attributes-ex" src="Images/attributes-ex.png" alt="attributes example">
+      </p>
+      <p>
+        Attributes contain extra information about the element that won't appear in the content. In this example, the <mark>class</mark> attribute is an identifying name used to target the element with style information.
+      </p>
+      <p>
+        An attribute should have:
+
+        <ul>
+          <li>A space between it and the element name. (For an element with more than one attribute, the attributes should be separated by spaces too.)
+          </li>
+          <li>The attribute name, followed by an equal sign.
+          </li>
+          <li>An attribute value, wrapped with opening and closing quote marks.
+          </li>
+        </ul>
+
+      </p>
+    </section>
+   
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <ul>
+          <li>
+            All documentation and images from this page is taken from
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+              target="_blank"
+              ><mark>MDN</mark></a
+            >
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  
+
+</body>
+</html>
